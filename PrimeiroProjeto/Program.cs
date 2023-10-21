@@ -5,18 +5,20 @@ namespace PrimeiroProjeto
 {
     internal class Program
     {
-        private static readonly double piValue = 3.14159;
 
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Vamos somar a área de um circulo");
-            Console.WriteLine("Entre com o raio desse circulo");
-            double circleRadius = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-             
-            double areaValue = piValue * (Math.Pow(circleRadius, 2));
+            Console.WriteLine("Vamos calcular o salário de um funcionario multiplicando a quantidade de horas pelo valor hora");
+            Console.WriteLine("Entre com o total que horas trabalhadas");
+            int totalHours = int.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            Console.WriteLine($"O valor da área é :{areaValue.ToString("F4",CultureInfo.InvariantCulture)}");
+            Console.WriteLine("Entre com o valor hora");
+            int valueHour = int.Parse(Console.ReadLine());
+
+            double salaryCalculate = (double)valueHour * totalHours;  
+
+            Console.WriteLine($"O valor do salário é :{salaryCalculate.ToString("F2",CultureInfo.InvariantCulture)}");
         }
     }
 }
