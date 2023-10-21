@@ -23,11 +23,9 @@ namespace PrimeiroProjeto
             trianguloY.B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
             trianguloY.C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            double p = (trianguloX.A + trianguloX.B + trianguloX.C) / 2.0; 
-            double areaX = Math.Sqrt(p * (p - trianguloX.A) * (p - trianguloX.B) * (p - trianguloX.C));
+            double areaX = trianguloX.calculateArea();
 
-            p = (trianguloY.A + trianguloY.B + trianguloY.C) / 2.0;
-            double areaY = Math.Sqrt(p * (p - trianguloY.A) * (p - trianguloY.B) * (p - trianguloY.C));
+            double areaY = trianguloY.calculateArea();
 
             Console.WriteLine("Área de X = " + areaX.ToString("F4", CultureInfo.InvariantCulture));
             Console.WriteLine("Área de Y = " + areaY.ToString("F4", CultureInfo.InvariantCulture));
