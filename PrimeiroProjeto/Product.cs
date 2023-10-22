@@ -8,6 +8,17 @@ namespace PrimeiroProjeto
         public double price;
         public int quantity;
 
+        public Product()
+        {
+
+        }
+
+        public Product(string name, double price)
+        {
+            this.Name = name;
+            this.price = price;
+        }
+
         public Product(string name, double price, int quantity)
         {
             this.Name = name;
