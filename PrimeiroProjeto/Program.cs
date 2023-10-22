@@ -7,18 +7,18 @@ namespace PrimeiroProjeto
     {
         static void Main(string[] args)
         {
-            Product product = new Product();
-
             Console.WriteLine("Entre os dados do produto:");
 
             Console.Write("Nome: ");
-            product.Name = Console.ReadLine();
+            string productName = Console.ReadLine();
 
             Console.Write("Preço: ");
-            product.price = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            double productPrice = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
             Console.Write("Quantidade: ");
-            product.quantity = int.Parse(Console.ReadLine());
+            int Productquantity = int.Parse(Console.ReadLine());
+
+            Product product = new Product(productName, productPrice, Productquantity);
 
             Console.WriteLine("Dados do produto: " + product);
 

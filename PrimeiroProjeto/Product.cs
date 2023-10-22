@@ -8,6 +8,13 @@ namespace PrimeiroProjeto
         public double price;
         public int quantity;
 
+        public Product(string name, double price, int quantity)
+        {
+            this.Name = name;
+            this.price = price;
+            this.quantity = quantity;
+        }
+
         public double ValorTotalEmEstoque()
         {
             return price * quantity;
