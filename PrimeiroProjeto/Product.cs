@@ -1,4 +1,5 @@
 ﻿using System.Globalization;
+using System.Xml.Linq;
 
 namespace PrimeiroProjeto
 {
@@ -26,25 +27,36 @@ namespace PrimeiroProjeto
             this._quantity = quantity;
         }
 
-        public string GetName()
+        public string Name
         {
-            return this._name;
+            get 
+            { 
+                return _name; 
+            }
+
+            set
+            {
+                if (value != null)
+                    this._name = value;
+            }
+
         }
 
-        public void SetName(string name)
+        public double Price
         {
-            if (name != null)
-                this._name = name;
+            get 
+            { 
+                return _price; 
+            }
+
         }
 
-        public double GetPrice()
+        public int Quantity
         {
-            return this._price;
-        }
-
-        public int GetQuantity()
-        {
-            return this._quantity;
+            get
+            {
+                return _quantity;
+            }
         }
 
         public double ValorTotalEmEstoque()
