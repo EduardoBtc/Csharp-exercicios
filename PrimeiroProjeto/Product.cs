@@ -1,5 +1,4 @@
 ﻿using System.Globalization;
-using System.Xml.Linq;
 
 namespace PrimeiroProjeto
 {
@@ -66,5 +65,4 @@ namespace PrimeiroProjeto
                 + this.ValorTotalEmEstoque().ToString("F2", CultureInfo.InvariantCulture);
         }
     }
-
 }
