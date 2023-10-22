@@ -4,9 +4,9 @@ namespace PrimeiroProjeto
 {
     internal class Product
     {
-        public string Name;
-        public double price;
-        public int quantity;
+        private string _name;
+        private double _price;
+        private int _quantity;
 
         public Product()
         {
@@ -15,37 +15,58 @@ namespace PrimeiroProjeto
 
         public Product(string name, double price)
         {
-            this.Name = name;
-            this.price = price;
+            this._name = name;
+            this._price = price;
         }
 
         public Product(string name, double price, int quantity)
         {
-            this.Name = name;
-            this.price = price;
-            this.quantity = quantity;
+            this._name = name;
+            this._price = price;
+            this._quantity = quantity;
+        }
+
+        public string GetName()
+        {
+            return this._name;
+        }
+
+        public void SetName(string name)
+        {
+            if (name != null)
+                this._name = name;
+        }
+
+        public double GetPrice()
+        {
+            return this._price;
+        }
+
+        public int GetQuantity()
+        {
+            return this._quantity;
         }
 
         public double ValorTotalEmEstoque()
         {
-            return price * quantity;
+            return _price * _quantity;
         }
 
         public void AdicionarProdutos(int quantity)
         {
-            this.quantity += quantity;
+            this._quantity += quantity;
         }
 
         public void RemoverProdutos(int quantity)
         {
-            this.quantity -= quantity;
+            this._quantity -= quantity;
         }
 
         public override string ToString()
         {
-            return this.Name + ", $ "
-                + this.price.ToString("F2", CultureInfo.InvariantCulture) + ", "
-                + this.quantity
+            return this._name + ", $ "
+                + this._price.ToString("F2", CultureInfo.InvariantCulture) + ", "
+                + this._quantity
                 + " unidades, Total: $ " 
                 + this.ValorTotalEmEstoque().ToString("F2", CultureInfo.InvariantCulture);
         }
